@@ -1,0 +1,35 @@
+<div class="form-row">
+  <div class="form-item">
+    <label>Name</label>
+    <input type="text" name="name" value="<%= product.name %>">
+  </div>
+
+  <div class="form-item">
+    <label>Category</label>
+    <input type="text" name="category" value="<%= product.category %>">
+  </div>
+  
+</div>
+
+<div class="form-row">
+  <div class="form-item">
+    <label>instockAt</label>
+    <input type="date" name="instockAt"
+          value="<%= product.instockAt == null ? '' : product.instockAt.toISOString().split('T')[0] %>">
+  </div>
+  <div class="form-item">
+    <label>Quantity</label>
+    <input type="number" name="quantity" min="1" value="<%= product.quantity %>">
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="form-item form-item-no-grow">
+    <label>Image</label>
+    <input type="file" name="cover" class="product-cover filepond">
+  </div>
+  <div class="form-item">
+    <label>Detail</label>
+    <textarea name="description"><%= product.description %></textarea>
+  </div>
+</div>
